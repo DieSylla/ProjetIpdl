@@ -1,0 +1,137 @@
+.admin-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.nav-bar {
+  background-color: var(--background-light);
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid var(--border);
+}
+
+.nav-bar h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.nav-bar h1 a {
+  color: var(--contrast);
+  text-decoration: none;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-bar li {
+  margin: 15px 0;
+}
+
+.nav-bar a {
+  display: flex;
+  align-items: center;
+  color: var(--color);
+  text-decoration: none;
+}
+
+.nav-bar a svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  fill: var(--contrast);
+}
+
+.nav-bar .activiteEnCours {
+  color: var(--contrast);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header-user {
+  padding: 20px 30px;
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border-bottom: 1.7px solid var(--border);
+}
+
+.infos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.infoSection {
+  background-color: var(--background-light);
+  padding: 20px;
+  border-radius: 5px;
+  width: 20%;
+  text-align: center;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.infoSection .nombre {
+  font-size: 1.2em;
+  color: var(--color);
+}
+
+.infoSection .representation {
+  margin: 15px 0;
+  font-size: 2em;
+  color: var(--contrast);
+}
+
+.infoSection .representation i {
+  margin-right: 10px;
+}
+
+.infoSectionFooter {
+  color: var(--contrast);
+  text-decoration: none;
+}
+
+.tableau2 {
+  background-color: var(--background-light);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.tableau2 > div:first-child {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tableau2 i {
+  margin-right: 10px;
+  color: var(--contrast);
+}
+
+.tableau2Info {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--contrast25);
+  padding: 10px;
+  font-weight: bold;
+  color: var(--contrast);
+}
+
+.ligne {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
