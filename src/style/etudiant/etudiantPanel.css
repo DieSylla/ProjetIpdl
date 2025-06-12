@@ -1,0 +1,502 @@
+/* Styles pour le panneau étudiant - similaire au style admin */
+
+/* Mise en page principale */
+.etudiant-panel {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fc;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Barre latérale */
+.sidebar {
+  width: 250px;
+  background-color: #4e73df;
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s;
+}
+
+.sidebar-header {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+.sidebar-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sidebar-item:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item.active {
+  color: white;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid white;
+}
+
+.sidebar-item i {
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-button i {
+  margin-right: 0.5rem;
+}
+
+/* Contenu principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* En-tête */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  z-index: 1;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5a5c69;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.user-role {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-right: 1rem;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1cc88a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Contenu de l'onglet */
+.tab-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  overflow-y: auto;
+}
+
+/* Pied de page */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-top: 1px solid #e3e6f0;
+  font-size: 0.85rem;
+  color: #858796;
+}
+
+.footer-info p {
+  margin: 0.2rem 0;
+}
+
+/* Cartes de statistiques */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  background-color: white;
+  transition: transform 0.2s;
+  border-left: 4px solid #1cc88a;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: #1cc88a;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #5a5c69;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5a5c69;
+}
+
+/* Grille de tutoriels */
+.tutorials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tutorial-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+}
+
+.tutorial-thumbnail {
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tutorial-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3e6f0;
+  color: #858796;
+  font-size: 2rem;
+}
+
+.tutorial-info {
+  padding: 1rem;
+  flex: 1;
+}
+
+.tutorial-info h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #5a5c69;
+}
+
+.tutorial-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.tutorial-subject, .tutorial-level {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.tutorial-subject {
+  background-color: #e3e6f0;
+  color: #5a5c69;
+}
+
+.tutorial-level {
+  background-color: #f6c23e;
+  color: white;
+}
+
+.tutorial-description {
+  font-size: 0.9rem;
+  color: #858796;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tutorial-actions {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #e3e6f0;
+}
+
+.watch-button {
+  flex: 1;
+  padding: 0.6rem;
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.watch-button:hover {
+  background-color: #2e59d9;
+}
+
+.favorite-button {
+  width: 40px;
+  height: 40px;
+  margin-left: 0.8rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #f8f9fc;
+  color: #858796;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.favorite-button:hover {
+  background-color: #e74a3b;
+  color: white;
+}
+
+.favorite-button.active {
+  background-color: #e74a3b;
+  color: white;
+}
+
+/* Profil */
+.profile-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: #4e73df;
+  color: white;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.profile-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.profile-email, .profile-role {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.profile-details {
+  padding: 2rem;
+}
+
+.profile-section {
+  margin-bottom: 2rem;
+}
+
+.profile-section h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #5a5c69;
+  border-bottom: 1px solid #e3e6f0;
+  padding-bottom: 0.5rem;
+}
+
+.profile-field {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.field-label {
+  width: 150px;
+  font-weight: 600;
+  color: #5a5c69;
+}
+
+.field-value {
+  flex: 1;
+  color: #858796;
+}
+
+/* États de chargement et messages */
+.loading, .no-data {
+  padding: 2rem;
+  text-align: center;
+  color: #858796;
+}
+
+.no-data {
+  background-color: #f8f9fc;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .etudiant-panel {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+  
+  .sidebar-menu {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+  
+  .sidebar-item {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+  .sidebar-item i {
+    margin-right: 0;
+    margin-bottom: 0.3rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .header-title {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tab-content {
+    padding: 1rem;
+  }
+  
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-info {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tutorials-grid {
+    grid-template-columns: 1fr;
+  }
+}

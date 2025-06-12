@@ -1,0 +1,174 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.header-user {
+  padding: 20px 30px;
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border-bottom: 1.7px solid var(--border);
+}
+
+.englobe {
+  display: flex;
+  align-items: center;
+}
+
+#user-name {
+  margin-right: 20px;
+}
+
+.fonctionnalite {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.fonctionnalite li {
+  margin-left: 15px;
+}
+
+.fonctionnalite a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+.fonctionnalite i {
+  margin-right: 5px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.citation h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.citation h1 span {
+  color: var(--contrast);
+}
+
+.tutoriel {
+  background-color: var(--background-light);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 15px;
+}
+
+.tutoriel a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cadre {
+  position: relative;
+}
+
+.professeur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--contrast);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.niveau {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.débutant {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.intermédiaire {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.header-tutoriel {
+  font-size: 1.5em;
+  margin: 30px 0 10px;
+  color: var(--contrast);
+}
+
+.footer-tutoriel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.matiere, .heure {
+  display: flex;
+  align-items: center;
+}
+
+.matiere svg, .heure svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  fill: var(--contrast);
+}
+
+.footer-student {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-top: 1px solid var(--border);
+}
+
+.motivation, .contact {
+  width: 40%;
+}
+
+.entete {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--contrast);
+}
+
+.contact p {
+  display: flex;
+  align-items: center;
+}
+
+.contact i {
+  margin-right: 10px;
+}
+
+.champ {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bouttonRond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 20px;
+  background-color: var(--contrast);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.bouttonRond.position {
+  background-color: #555;
+}
+
+.bouttonRond i {
+  color: #fff;
+}
