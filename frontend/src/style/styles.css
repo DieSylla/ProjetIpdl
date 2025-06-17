@@ -1,0 +1,136 @@
+/* src/Login.css et src/Register.css (contenu identique pour les deux) */
+:root {
+  --background: #f7fafb;
+  --background-light: #fff;
+  --color: #121c42;
+  --contrast: #4869ee;
+  --border: #d5e3ec;
+  --message-background-color: #f8d7da;
+  --message-erreur-texte: #842029;
+  --message-border-succes: #a3cfbb;
+  --message-background-succes-color: #d1e7dd;
+  --message-succes-texte: #0a3622;
+}
+
+.theme-dark {
+  --background: #171933;
+  --background-light: #22244d;
+  --color: #d4dcff;
+  --contrast: #5396e7;
+  --border: #2a2e5e;
+  --message-background-color: #842029;
+  --message-erreur-texte: #ef7a84;
+  --message-border-succes: #062015;
+  --message-background-succes-color: #0a3622;
+  --message-succes-texte: #99dbbd;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--color);
+  min-height: 100vh;
+}
+
+.header-user {
+  padding: 20px 30px;
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border-bottom: 1.7px solid var(--border);
+}
+
+.logo-Youtube {
+  fill: var(--contrast);
+  width: 30px;
+  height: 25px;
+}
+
+.containerFormulaire {
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 25%;
+  padding: 30px 25px;
+  border-radius: 14px;
+}
+
+.formInscription {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInscription label {
+  margin-top: 10px;
+}
+
+.formInscription input:not([type="radio"]) {
+  border: 1px solid var(--border);
+  background: var(--background);
+  border-radius: 3px;
+  color: var(--color);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.formInscription button {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.2) 100%) var(--contrast);
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 7px;
+  cursor: pointer;
+}
+
+.formInscription button:hover {
+  filter: brightness(1.2);
+}
+
+.password-container {
+  position: relative;
+  margin: 10px 0;
+}
+
+.erreur {
+  padding: 13px 8px;
+  background-color: var(--message-background-color);
+  color: var(--message-erreur-texte);
+  border: 1px solid var(--message-background-color);
+  border-radius: 4px;
+  margin-bottom: 7px;
+}
+
+.succes {
+  padding: 13px 8px;
+  background-color: var(--message-background-succes-color);
+  border: 1px solid var(--message-border-succes);
+  color: var(--message-succes-texte);
+  border-radius: 4px;
+  margin-bottom: 7px;
+}
+
+.messageErreur {
+  padding: 13px 8px;
+  background-color: var(--message-background-color);
+  border: 1px solid var(--message-background-color);
+  color: var(--message-erreur-texte);
+  border-radius: 4px;
+  margin-bottom: 7px;
+}
+
+.profil {
+  display: block;
+  margin: 10px 0;
+}
+
+.profil label {
+  margin-right: 15px;
+}
+
+.profil input[type="radio"] {
+  margin-right: 5px;
+}
